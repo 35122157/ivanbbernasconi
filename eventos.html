@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- MENU DESPLEGABLE   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+    <title>Jazz&Bossa Iván Bernasconi</title>
+
+</head>
+
+<body>
+    <section class="container">
+
+        <div class="item header">
+            <header id="header">
+                <div class="logosignature">
+                    <div class="signature">
+                        <h1>Iván <br> Bernasconi</h1>
+                        <h2>Jazz & Bossa</h2>
+                    </div>
+
+
+                    
+                </div>
+                <div class="nav">
+                    <nav>
+
+                        <ul>
+                            <li> <a href="index.html">Home</a></li>
+                            <li> <a href="eventos.html">Eventos</a></li>
+                            <li> <a href="contacto.html">Contacto</a></li>
+                            <li> <a href="proyectos.html">Proyectos</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+            </header>
+        </div>
+
+        <div class="main eventos">
+            <div class="eventoslides">
+                <div class="row">
+                    <!--FILA DE FOTOS PEQUEÑAS-->
+                    <div class="column">
+                        <img class="demo cursor" src="images/flyer1.jpg" onclick="currentSlide(1)"
+                            alt="LiveStream Especial The Beatles">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/flyer2.jpg" onclick="currentSlide(2)"
+                            alt="CoolJazzNight Thelonius">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/flyer3.jpg" onclick="currentSlide(3)"
+                            alt="4tet PLAYS&SINGS Bebop">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/flyer4.jpg" onclick="currentSlide(4)"
+                            alt="CoolJazzNigonht Cgo">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/flyer5.jpg" onclick="currentSlide(5)"
+                            alt="ChetBakerSing Aldos">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/flyer6.jpg" onclick="currentSlide(6)"
+                            alt="CoolJazzNight Aldos">
+                    </div>
+                </div>
+                <!-- IMAGENES SLIDESHOW -->
+                <div class="imgcontainer">
+
+
+                    <div class="mySlides">
+                        <img class="flyer" src="images/flyer1.jpg" alt="flyer" style="width:100%">
+                        "LiveStream Especial The Beatles"
+                    </div>
+
+                    <div class="mySlides">
+                        <img class="flyer" src="images/flyer2.jpg" alt="flyer" style="width:100%">
+                        "CoolJazzNight Thelonius"
+                    </div>
+
+                    <div class=" mySlides">
+                        <img class="flyer" src="images/flyer3.jpg" alt="flyer" style="width:100%">
+                        "4tet PLAYS&SINGS Bebop"
+                    </div>
+
+                    <div class=" mySlides">
+                        <img class="flyer" src="images/flyer4.jpg" alt="flyer" style="width:100%">
+                        "CoolJazzNigonht Cgo"
+                    </div>
+
+                    <div class="mySlides">
+                        <img class="flyer" src="images/flyer5.jpg" alt="flyer" style="width:100%">
+                        "ChetBakerSing Aldos"
+                    </div>
+
+                    <div class="mySlides">
+                        <img class="flyer" src="images/flyer6.jpg" alt="flyer" style="width:100%">
+                        "CoolJazzNight Aldos"
+                    </div>
+
+                    <!-- botones -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Imagenes texto -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+                </div>
+            </div>
+            <div clas="proximoseventosdata">
+                <span class="proximoseventostitle"> PRÓXIMOS EVENTOS </span>
+
+                <p class="proximoseventos">
+                    Noches de Jazz en vivo en los mejores bares y teatros de la noche porteña. <br><span
+                        class="imp">Iván Buraschi Bernasconi</span>
+                    presenta un espectáculo único que nos invita a viajar
+                    a través de las delicadas sonoridades del Jazz y la Bossa Nova.
+                    Desde Chet Baker y Miles Davis pasando por Frank Sinatra y Tom Jobim el grupo propone exquisitos
+                    arreglos para redescubrir canciones destacadas como "Let's Get Lost" y "Corcovado",
+                    incluyendo baladas como "My Funny Valentine" y esperando sorprender al espectador.
+                    <br> <span class="imp"> <a class="tickets" href="https://www.entradas.com/" target="_BLANK">
+                            ¡Adquirí tus
+                            entradas haciendo click aquí!</a></span>
+                </p>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="item footer">
+            <footer>
+                <div class="redeslist">
+
+
+                    <a href="https://www.facebook.com/ivan.b.bernasconi" target="_blank"><img class="redes"
+                            src="images/fb2.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/ivanburaschibernasconi/" target="_blank"><img class="redes"
+                            src="images/instacolor.png" alt="Instagram"></a>
+                    <a href="https://open.spotify.com/artist/30GJ7HmRSseAsNKmyqI3oN" target="_blank"><img class="redes"
+                            src="images/spotcolor.png" alt="Spotify"></a>
+
+
+
+                </div>
+                <div class="contacto">
+                    <h5>ivanburaschi@jazz.com.ar</h5>
+                    <h5>(+54911) 265 4712</h5>
+                    <h6>Todos los derechos reservados.</h6>
+                </div>
+            </footer>
+
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
