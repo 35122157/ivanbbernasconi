@@ -3,6 +3,7 @@ const formulario = document.getElementById("formulario"); //captur los elementos
 const userName = document.getElementById("userName"); 
 const userEmail = document.getElementById("userEmail");
 const userConsulta = document.getElementById('userConsulta');
+const btn = document.getElementById('button');
 
 const alertSuccess = document.getElementById("alertSuccess");
 const alertName = document.getElementById("alertName");
@@ -42,3 +43,40 @@ formulario.addEventListener("submit", (e) => {
         userName.classList.add("is-valid");
         alertName.classList.add("d-none");
     }
+
+    // validar email
+    if (!regUserEmail.test(userEmail.value) || !userEmail.value.trim()) {
+        userEmail.classList.add("is-invalid");
+
+        errores.push({
+            tipo: alertEmail,
+            msg: "Escriba un correo válido",
+        });
+    } else {
+        userEmail.classList.remove("is-invalid");
+        userEmail.classList.add("is-valid");
+        alertEmail.classList.add("d-none");
+    }
+
+    if (errores.length !== 0) {
+        pintarMensajeError(errores);
+        return;
+    }
+
+    console.log("Formulario enviado con éxito");
+    //pintarMensajeExito();
+
+    btn.value = 'Enviando...'; //cuando-aprieto-boton-enviar-se-transforma-a-enviando
+
+        const serviceID = 'default_service';
+        const templateID = 'template_fimv92b';
+
+        emailjs.sendForm(serviceID, templateID, formulario)
+            .then(() => {
+            btn.value = 'Enviar'; //una-vez-enviado-el-boton-vuelve-a-su-estado-inicial
+            alert('Mensaje enviado correctamente!');
+            }, (err) => {
+            btn.value = 'Enviar';
+            alert(JSON.stringify(err));
+        });
+});
