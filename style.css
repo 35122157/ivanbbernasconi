@@ -31,6 +31,13 @@ body {
     display: flex;
     flex-flow: column
 }
+@media sceen and (min-width=800px) {
+    .header{
+        background-size: 100vw;
+    }
+    
+}
+
 
 h1 {
     padding-top: 2vw;
@@ -213,7 +220,7 @@ header nav a:hover {
     grid-template-areas: "slideimg eventosdata"
 }
 
-/*SLIDEIMAGES*/
+/*EVENTOS SLIDEIMAGES*/
 .flyer,
 .demo,
 .cursor {
@@ -276,7 +283,7 @@ header nav a:hover {
     padding: 1vw 4vw;
     color: white;
     font-size: 2vw;
-
+text-align: center;
 }
 
 .row:after {
@@ -430,6 +437,29 @@ header nav a:hover {
 /* For mobile phones: */
 
   @media screen and (max-width: 600px) and (min-width: 100px) { 
+   /*GRID*/
+    .container{
+        display: grid;
+        grid-template: 0.25fr 0.5fr 0.25fr / 2.5fr 1.5fr ;
+        grid-template-areas: "header header" "main main" "footer footer";
+    }
+    /*HEADER&NAV*/
+    header{
+       
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        float: left;
+        justify-content: baseline;
+        align-items: baseline;
+        grid-area: header;
+       
+    }
+    .header{
+       
+        grid-area: header;
+        background-size: 400px;
+    }
 
     .nav {
         min-block-size: 1px;
@@ -447,15 +477,187 @@ header nav a:hover {
         align-self: center;
 
     }
-
+    .nav ul {
+        background-color: black;
+        min-height: 15vh;
+        display: inline-block;
+        padding: 7vh;
+        padding-top: 3vh;
+    }
+    
+    header nav a {
+        text-decoration: none;
+        font-size: 3vw;
+        
+    }
     .logosignature {
 
         letter-spacing: 1vw;
-        line-height: 16vh;
+        line-height: 6vh;
         text-align: center;
+        width: 50%;
+    }
+    /*FOOTER*/
+    .footer {
+      
+        margin-top: 3vw;
+      
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-content: center;
+    
+    }
+    
+    .redes {
+        display: flex;
+        justify-content: center;
+        padding: 3vh 6vh 3vh 6vh;
+        height: 2.5vh;
+        transition: all ease-out 250 ms;
+        float: left;
+    }
+    .contacto{
         width: 100%;
+        font-size: 1vh;
     }
 
+.main {
+    grid-area: main;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding: 0;
+
+}
+/*HOME*/
+.frase {
+    margin: 5vh 0 5vh;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.cita {
+    width: 100%;
+    color: white;
+    font-size: 1.5vh;
+    font-weight: bold;
+    letter-spacing: 2vh;
+}
+
+.ref {
+    width: 100%;
+    font-size: 1vh;
+    font-weight: 300;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 100%;
+    box-sizing: content-box;
+
+}
+
+.articleimg img {
+    box-sizing: content-box;
+    width: 40vh;
+
+}
+
+.imp {
+    font-size: 1.5vh;
+    color: orange;
+
+}
+
+.imp a {
+    text-decoration: none;
+    color: orange;
+    padding-top: 5vh;
+}
+
+.parrafo {
+    letter-spacing: 0.5vh;
+    font-size: 1vh;
+}
+
+.fotos {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    flex-flow: row wrap;
+    opacity: 0.5;
+
+}
+
+.fotos img {
+    opacity: 1;
+    margin: 20vh 2.5% 0 2.5%;
+    width: 15%;
+    min-width: 150px;
+    opacity: 0.8;
+    transition: ease-in;
+
+}
+
+.fotos img:hover {
+    opacity: 1;
+
+}
+
+.main iframe {
+    margin-top: 20vh;
+    border-radius: 12px;
+    opacity: 0.7;
+}
+/*EVENTOS*/
+.eventos {
+    margin-top: 3vh;
+}
+.proximoseventosdata {
+  margin-top: 2vh;
+}
+
+.proximoseventostitle {
+
+margin-top: 3vh;
+
+
+}
+
+.proximoseventos {
+    width: 100%;
+    margin: 5vw 0vw 0 2vw;
+    font-size: 0.75vw;
+
+}
+/*PROYECTOS*/
+.proyecto {
+    display: flex;
+    flex-direction: column;
+   
+}
+.proyecto, .uno iframe{
+margin-top: 0;
+padding-top: 0;
+}
+.proyecto iframe {
+    
+   width: 100%;
+}
+
+.resumen {
+    width: 100%;
+font-size: 1.5vh;
+}
+
+.resumen h2 {
+    margin: 5vh;
+}
+/*CONTACTO*/
 
 
   }
@@ -484,7 +686,5 @@ header nav a:hover {
         text-align: center;
         width: 100%;
     }
-
-
 
   }
